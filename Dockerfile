@@ -1,7 +1,7 @@
 FROM alpine
 
 RUN apk update
-RUN apk add --no-cache mysql-client aws-cli
+RUN apk add --no-cache mysql-client aws-cli pigz
 
 ADD backup.sh /usr/local/bin/backup
 

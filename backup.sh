@@ -12,7 +12,7 @@ mysqldump -u${MYSQL_USER:-root} \
         --single-transaction \
         --routines \
         --triggers \
-        --databases $MYSQL_DATABASES | gzip > $FILENAME
+        --databases $MYSQL_DATABASES | pigz > $FILENAME
 
 aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
